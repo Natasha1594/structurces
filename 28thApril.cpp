@@ -118,3 +118,17 @@ void InfixToPostifx(char infix_exp[], char postfix_exp[])
 
     }
 }
+
+int main()
+{
+    char infix[SIZE], postfix[SIZE];
+
+    cout<<("\nEnter infix expression:");
+    cin>>(infix);
+
+    InfixToPostifx(infix, postfix);
+    cout<<("Postfix Expression: ");
+    cout<<(postfix);
+
+    return 0;
+}

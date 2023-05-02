@@ -1,6 +1,6 @@
 #include <iostream>
 #include  <stdlib.h>
-#include  <ctype>
+#include  <ctype.h>
 #include  <string.h>
 
 #define SIZE 100
@@ -105,7 +105,8 @@ void InfixToPostifx(char infix_exp[], char postfix_exp[])
             while(x != '(')/* '(' encountered*/
             {
                 postfix_exp[j] = x;
-                x = pop;
+                j++;
+                x = pop();
             }
         }
         else{/* if current symbol is neither operand not '(' nor ')' and nor operator*/
